@@ -34,6 +34,7 @@ export default function RootLayout({
   return (
   
     <Suspense fallback={<div>Loading...</div>}>
+    
       <ClerkProvider>
 
         <html lang="en">
@@ -44,10 +45,9 @@ export default function RootLayout({
             <ReduxProvider>
               <Navbar />
               
-      
-   
-
-              {children}
+              
+            
+            {children}
             </ReduxProvider>
             <SubscribeBox />
             <Footer />
@@ -55,7 +55,6 @@ export default function RootLayout({
         
         </html>
         </ClerkProvider>
-   
     </Suspense>
  
   );
